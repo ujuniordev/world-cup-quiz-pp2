@@ -8,21 +8,25 @@
 
 html {
     min-height: 100%;
-  }
-  
-  body {
+}
+
+/* font-family and background image */
+body {
     font-family: 'Hind', sans-serif;
     margin: 0;
     background-image: url("../images/world-cup-background.jpg");
-  
-  }
-  
-  header {
+
+}
+
+/* positioning the header and applying fixed height */
+
+header {
     margin-top: 50px;
     height: 100px;
-  }
-  
-  :root {
+}
+
+:root {
     --search-box-height: 40px;
     --content-max-width: 600px;
-  }
+}
+

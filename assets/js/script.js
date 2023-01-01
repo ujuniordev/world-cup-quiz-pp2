@@ -52,3 +52,47 @@ function startGame(event) {
 
     startGameButton.textContent = "Restart Game";
 }
+
+
+// function to count and display the number of questions
+function questionsCounter() {
+    // initiates the list passing 1 to the counter
+    var questionList = '<ul>';
+    let i = 1;
+    questions.forEach(function (question) {
+        // adds 1 to each interaction and display in a list
+        questionList += '<li class="btn btn-light" id="question' + i + '">' + i + '</li>';
+        i++;
+    });
+    // closes the tag and finishes by adding the html to the DOM
+    questionList += '</ul>';
+    questionCounter.innerHTML = questionList;
+}
+
+
+// function to display the next question as soon as the previous question is answered
+function showNextQuestion() {
+    if (currentQuestionIndex >= questions.length) {
+        endGame();
+    }
+    let currentQuestion = questions[currentQuestionIndex];
+
+    questionContainer.textContent = currentQuestion.question;
+
+
+    // Clear the container in case it's got buttons from the previous
+    // round/question.
+    choicesContainer.innerHTML = "";
+
+    for (let choice of currentQuestion.choices) {
+        let choiceButton = document.createElement("button");
+        choiceButton.textContent = choice;
+        choiceButton.classList.add("answer-button", "btn", "btn-secondary");
+
+        choiceButton.id = choice;
+
+        choiceButton.addEventListener("click", checkAnswer);
+
+        choicesContainer.appendChild(choiceButton);
+    }
+}

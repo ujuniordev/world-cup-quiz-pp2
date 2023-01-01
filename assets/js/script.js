@@ -96,3 +96,42 @@ function showNextQuestion() {
         choicesContainer.appendChild(choiceButton);
     }
 }
+
+// function to check the correct answer the display if it is correct or not
+function checkAnswer(event) {
+    let clickedButton = event.currentTarget;
+
+    let userAnswer = clickedButton.id;
+
+    let currentQuestion = questions[currentQuestionIndex];
+    let currentCounterOption = `question${currentQuestionIndex +1}`;
+
+    let currentQuestionAnswer =
+        currentQuestion.choices[currentQuestion.answerIndex];
+    document.getElementById(currentCounterOption).classList.remove("btn-light");
+    if (userAnswer === currentQuestionAnswer) {
+        correctAnswers++;
+        document.getElementById(currentCounterOption).classList.add("btn-success");
+    } else {
+        document.getElementById(currentCounterOption).classList.add("btn-danger");
+    }
+
+    // update this to point at the next question.
+    // the shorthand for this is currentQuestionIndex + 1 or currentQuestionIndex++
+    currentQuestionIndex = currentQuestionIndex + 1;
+    showNextQuestion();
+}
+
+// function to display the score at the end of the game
+function endGame() {
+    // displays the score
+    gameOverContainer.innerHTML = `<h2>You scored ${correctAnswers} out of ${questions.length}</h2>`;
+
+
+    // Clean up the question and choices
+    questionContainer.innerHTML = "";
+    choicesContainer.innerHTML = "";
+    questionCounter.innerHTML = "";
+
+    startGameButton.textContent = "Play Again";
+}

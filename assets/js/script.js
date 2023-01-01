@@ -28,3 +28,27 @@ const questions = [{
     },
 ];
 
+// declare the variables
+const questionContainer = document.getElementById("question-container");
+const choicesContainer = document.getElementById("choices-container");
+const questionCounter = document.getElementById("question-counter");
+const startGameButton = document.getElementById("start-game-button");
+const gameOverContainer = document.getElementById("game-over-container");
+
+// declare these without a value. Will initialize the value in startGame()
+let currentQuestionIndex;
+let correctAnswers;
+
+
+// function start game that calls the questions counter and show next question functions
+function startGame(event) {
+    // Reset this and everything else that needs to be reset at the start of the game
+    currentQuestionIndex = 0;
+    correctAnswers = 0;
+
+    questionsCounter();
+    showNextQuestion();
+    gameOverContainer.innerHTML = "";
+
+    startGameButton.textContent = "Restart Game";
+}

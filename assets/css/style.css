@@ -30,3 +30,95 @@ header {
     --content-max-width: 600px;
 }
 
+*,
+*::before,
+*::after {
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* headings position and style */
+h1 {
+    color: #fff;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin: 100px auto;
+}
+
+/* buttons position and size */
+button {
+    display: inline-block;
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+}
+
+#start-game-button {
+    margin: 50px auto;
+    display: block;
+}
+
+/* container with the answer options */
+#choices-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 700px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* the number of questions display */
+#question-counter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 700px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#question-counter ul {
+    padding: 0;
+}
+
+#question-container {
+    margin: 30px;
+}
+
+#quiz-container {
+    background-color: #fff;
+    margin: 0 25% 0 25%;
+    padding: 100px 0 100px 0;
+    border-radius: 5px;
+}
+
+#game-over-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* media queries */
+@media screen and (max-width: 1500px) {
+    header {
+        height: 50px;
+        margin-top: 30px;
+    }
+
+    #quiz-container {
+        margin: 0 10%;
+        padding: 30px 0;
+    }
+
+    #choices-container {
+        display: flex;
+        justify-content: center;
+    }
+
+}

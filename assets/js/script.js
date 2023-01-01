@@ -39,6 +39,7 @@ const gameOverContainer = document.getElementById("game-over-container");
 let currentQuestionIndex;
 let correctAnswers;
 
+startGameButton.addEventListener("click", startGame);
 
 // function start game that calls the questions counter and show next question functions
 function startGame(event) {

@@ -75,7 +75,7 @@ The testing plan was based on the features described for the website
 | T04 | Start button | Open the website and click on start game | The game will start and the first question should be displayed | PASS | F04 |
 | T05 | Restart button | Open the website, start a new game, reply a couple of questions and then click on restart game | The game should restart, the counter should reset and the first question should be loaded | PASS | F04|
 | T06 | Play Again button | Play a game until the end and once the score is displayed click on play again | The game should restart, the counter should reset and the first question should be loaded | PASS | F04 |
-| T07 | Responsiveness | All tests above should be carried out on different resolution screens to check whether the content is properly displayed | Content should be properly displayed and accommodated within different resolutions - Media queries were added to properly adjust the content where necessary, for example the questions container | FAIL | All features |
+| T07 | Responsiveness | All tests above should be carried out on different resolution screens to check whether the content is properly displayed | Content should be properly displayed and accommodated within different resolutions - Media queries were added to properly adjust the content where necessary, for example the questions container | PASS | All features |
 | T08 | Browser compatibility | Open the website on different browsers to check compatibility | The website should load without any issues | PASS | All features |
 
 ### Code Validation

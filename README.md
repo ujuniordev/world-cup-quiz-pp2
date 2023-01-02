@@ -17,7 +17,7 @@ As a user, I want to visualize the options so that I can choose the right answer
  - **US 04 Start/Restart/Play again button**
 As a user, I want to visualize a Start/Restart/Play again button so that I can start or restart the quiz.
 
-## Features
+### Features
 
 This website contains the following features/pages that were developed considering the user's stories listed in the section User experience above, they should all have responsive behavior allowing navigation on any device:
  - **F1 Header (using US01)**
@@ -29,6 +29,14 @@ This block is straightforward and it brings to the user the questions about the 
  - **F4 Start/Restart/Play again button (using US4)**
 When pressing the button Start/Restart/Play again the user is redirected to the beginning of the game and can play again.
 
+### Features to be implemented
+
+- Create a bigger poll of questions that can be always randomly displayed for the user
+- Improve the end game scoring text to display CONGRATS or TOO BAD, depending on the final score of the user
+- Make it possible for the user to share his score on social networks
+- Allow the user to save his progress
+
+
 ## Design
 
 The following design choices were made: clean and simple fonts & color palettes, but since the main goal of this page is to be playful, a background image was included with the World Cup cup & the use of Bootstrap was included to add colors to the buttons.
@@ -39,9 +47,17 @@ The following design choices were made: clean and simple fonts & color palettes,
  - CSS3
  - Vanilla JavaScript
  
-## Frameworks, Libraries & Programs Used
+## Frameworks, font and image libraries, Programs and code websites references used during the implementation
+
+### Frameworks
+ - [Git](https://git-scm.com/) was used for version control through [Gitpod](https://gitpod.io/) terminal, using CLI git commands to commit and push to GitHub
+ - [GitHub](https://github.com/) is used as the repository for the entire project
+ ### Libraries
  - [Google Fonts](https://fonts.google.com/) was used to add the Montserrat and Hind fonts into the CSS file and was used on all the pages
  - [Font Pair](https://www.fontpair.co/) and [Font Joy](https://fontjoy.com/) were used to find combinations of fonts to be used in the website
  - [Flat Icon](https://www.flaticon.com/) was used to add the skills images to the skills page
- - [Git](https://git-scm.com/) was used for version control through [Gitpod](https://gitpod.io/) terminal, using CLI git commands to commit and push to GitHub
- - [GitHub](https://github.com/) is used as the repository for the entire project
+ - [Bootstrap] (https://getbootstrap.com/) was used to add a nice style specially to the buttons of the game
+ ### Code
+ - 
+
+
